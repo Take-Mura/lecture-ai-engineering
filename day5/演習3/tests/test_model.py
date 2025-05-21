@@ -77,7 +77,7 @@ def preprocessor():
 def train_model(sample_data, preprocessor):
     """モデルの学習とテストデータの準備"""
     # データの分割とラベル変換
-    X = sample_data.drop("Survived", axis=1)
+    X = sample_data.drop("Survived", axis=1) 
     y = sample_data["Survived"].astype(int)
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
@@ -85,7 +85,7 @@ def train_model(sample_data, preprocessor):
 
     # モデルパイプラインの作成
     model = Pipeline(
-        steps=[
+        steps=[ 
             ("preprocessor", preprocessor),
             ("classifier", RandomForestClassifier(n_estimators=100, random_state=42)),
         ]
