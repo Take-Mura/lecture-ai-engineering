@@ -18,7 +18,7 @@ def titanic_data():
 def test_inference_time(benchmark, titanic_data):
     """pytest-benchmark で推論時間を計測"""
     X_train, X_test, y_train, y_test = titanic_data
-    model = ModelTester.train_model(X_train, y_train)
+    model = ModelTester.train_model(X_train, y_train) 
 
     # 推論部分のみをベンチマーク
     benchmark(model.predict, X_test) 

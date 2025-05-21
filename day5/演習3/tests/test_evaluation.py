@@ -14,7 +14,7 @@ def titanic_data():
     # データロード＆前処理
     data = DataLoader.load_titanic_data()
     X, y = DataLoader.preprocess_titanic_data(data)
-    return train_test_split(X, y, test_size=0.2, random_state=42)
+    return train_test_split(X, y, test_size=0.2, random_state=42) 
 
 
 def test_accuracy_precision_recall_f1(titanic_data):
