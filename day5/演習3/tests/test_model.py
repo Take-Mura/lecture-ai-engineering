@@ -109,7 +109,7 @@ def test_model_exists():
     assert os.path.exists(MODEL_PATH), "モデルファイルが存在しません"
 
 
-def test_model_accuracy(train_model):
+def test_model_accuracy(train_model): 
     """モデルの精度を検証"""
     model, X_test, y_test = train_model
 

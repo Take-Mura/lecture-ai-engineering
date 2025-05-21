@@ -21,4 +21,4 @@ def test_inference_time(benchmark, titanic_data):
     model = ModelTester.train_model(X_train, y_train)
 
     # 推論部分のみをベンチマーク
-    benchmark(model.predict, X_test)
+    benchmark(model.predict, X_test) 
